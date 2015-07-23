@@ -34,6 +34,7 @@ import libreria.sistema.ControladorBaseDatos;
  */
 public class PQR extends TipoContenido {
 
+    public static final String iden = "pqr";
     public static final String TIPO_PETICION = "peticion";
     public static final String TIPO_QUEJA = "queja";
     public static final String TIPO_RECLAMO = "reclamo";

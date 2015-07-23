@@ -30,6 +30,7 @@ import libreria.sistema.ControladorBaseDatos;
 public class Noticias extends TipoContenido {
 
     public String urlImagen;
+    public static final String iden = "noticias";
 
     public Noticias(Activity act) {
         super(act);

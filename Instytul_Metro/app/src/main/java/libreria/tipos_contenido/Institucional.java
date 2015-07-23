@@ -28,9 +28,12 @@ import libreria.sistema.ControladorBaseDatos;
  */
 public class Institucional extends TipoContenido {
 
+    public static final String iden = "institucional";
+
     public Institucional(Activity activity) {
         super(activity);
     }
+
 
 
     /**

@@ -30,6 +30,7 @@ public class App extends AppConfig {
     public static final String URL_ENVIAR_ENCUESTA_RESPUESTA="https://appsthergo.com/upanel/public/app/enviar/encuestas/respuesta";
     public static final String URL_ENVIAR_PQR="https://appsthergo.com/upanel/public/app/enviar/pqr";
     public static final String URL_RECIBIR_PQR="https://appsthergo.com/upanel/public/app/recibir/pqr";
+    public static final String URL_META_REGISTRAR="https://appsthergo.com/upanel/public/app/enviar/meta/registrar";
 
     /**
      * *******************************************************

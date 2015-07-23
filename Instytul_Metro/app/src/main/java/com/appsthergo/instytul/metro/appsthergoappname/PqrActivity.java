@@ -20,6 +20,8 @@ import libreria.complementos.Util;
 import libreria.conexion.ComunicacionPQR;
 import libreria.conexion.Conexion;
 import libreria.sistema.App;
+import libreria.tipos_contenido.Encuesta;
+import libreria.tipos_contenido.PQR;
 
 
 public class PqrActivity extends ActionBarActivity {
@@ -37,6 +39,15 @@ public class PqrActivity extends ActionBarActivity {
             ComunicacionPQR com = new ComunicacionPQR(this);
             com.execute();
         }
+
+        //Envia información de actividad al servidor
+        Thread hilo = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Conexion.registrarActividad(PqrActivity.this,PQR.iden);
+            }
+        });
+        hilo.start();
     }
 
 

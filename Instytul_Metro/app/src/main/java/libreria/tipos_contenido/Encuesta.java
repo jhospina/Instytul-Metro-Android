@@ -40,7 +40,7 @@ public class Encuesta extends TipoContenido {
     public static final int ESTADO_RESPUESTA_NO_CONTESTADO = 0;
     public static final int ESTADO_RESPUESTA_CONTESTADO = 1;
     public static final int ESTADO_RESPUESTA_CONTESTADO_Y_ENVIADO = 2;
-    public static final String tipoDato = "encuestas";
+    public static final String iden = "encuestas";
 
     public static int respuesta_seleccionada = 0;
 
