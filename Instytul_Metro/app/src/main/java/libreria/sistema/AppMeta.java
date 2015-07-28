@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import libreria.tipos_contenido.Encuesta;
 
@@ -78,8 +79,6 @@ public class AppMeta {
             db.close();
             return  meta;
         }
-
-
         db.close();
         return null;
     }

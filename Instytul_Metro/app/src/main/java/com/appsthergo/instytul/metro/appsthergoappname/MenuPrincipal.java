@@ -38,7 +38,16 @@ public class MenuPrincipal extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_menu_principal);
+
+        if(!RegistroUsuarioActivity.registro) {
+            if(AppMeta.findByClave(MenuPrincipal.this,App.obtenerIdDispositivo(this)+"_"+RegistroUsuarioActivity.reg_genero)==null) {
+                Intent intent = new Intent(MenuPrincipal.this, RegistroUsuarioActivity.class);
+                startActivity(intent);
+            }
+        }
+
         App.establecerBarraAccion(this,null);
         establecerApariencia();
 

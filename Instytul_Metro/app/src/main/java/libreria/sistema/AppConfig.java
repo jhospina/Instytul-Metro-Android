@@ -95,6 +95,13 @@ public class AppConfig {
     public static String txt_info_escribe_tu_respuesta="Escribe tu respuesta aquí...";
     public static String txt_info_usuario_soporte="Soporte";
     public static String txt_info_usuario="Usuario";
+    public static String txt_reg_msj_inicial="¡Gracias por instalar nuestra aplicación!";
+    public static String txt_reg_pulsar_pantalla="¡Pulsa en la pantalla para continuar!";
+    public static String txt_reg_pregunta1="¿Eres hombre o mujer?";
+    public static String txt_reg_pregunta1_resp_op1="Hombre";
+    public static String txt_reg_pregunta1_resp_op2="Mujer";
+    public static String txt_reg_pregunta2="¿Cuantos años tienes?";
+
 
 
 }

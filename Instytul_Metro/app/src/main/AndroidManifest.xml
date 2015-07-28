@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.appsthergo.instytul.metro.appsthergoappname">
+    package="com.appsthergo.instytul.metro.appsthergoappname" >
 
     <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
@@ -74,7 +75,11 @@
             android:enabled="true"
             android:exported="true" >
         </service>
+
+        <activity
+            android:name=".RegistroUsuarioActivity"
+            android:label="@string/title_activity_registro_usuario" >
+        </activity>
     </application>
 
 </manifest>
-

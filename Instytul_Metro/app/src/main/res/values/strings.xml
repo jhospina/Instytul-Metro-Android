@@ -12,4 +12,7 @@
     <string name="title_activity_pqr__reclamos">PQR_ReclamosActivity</string>
     <string name="title_activity_pqr__sugerencias">PQR_SugerenciasActivity</string>
     <string name="title_activity_ver_pqr">VerPqr</string>
+    <string name="title_activity_registro_usuario">RegistroUsuarioActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

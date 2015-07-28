@@ -163,4 +163,32 @@ public class Conexion {
 
     }
 
+    public static void registrarMetaDato(Activity activity,String clave,String valor){
+
+        if(!Conexion.verificar(activity))
+            return;
+
+        String regClave=clave;
+
+        if(AppMeta.findByClave(activity, regClave)!=null)
+            return;
+
+        AppMeta meta=new AppMeta(activity);
+
+        meta.setClave(regClave);
+        meta.setValor(valor);
+        meta.save();
+
+        String[][] datos = new String[3][2];
+        datos[0][0] = "key_app";
+        datos[0][1] = App.keyApp;
+        datos[1][0] = "clave";
+        datos[1][1] = regClave;
+        datos[2][0] = "valor";
+        datos[2][1] =  valor;
+
+        Conexion.conectar(App.URL_META_REGISTRAR, datos);
+
+    }
+
 }
