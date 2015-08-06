@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
@@ -42,7 +44,7 @@ public class MenuPrincipal extends ActionBarActivity {
         setContentView(R.layout.activity_menu_principal);
 
         if(!RegistroUsuarioActivity.registro) {
-            if(AppMeta.findByClave(MenuPrincipal.this,App.obtenerIdDispositivo(this)+"_"+RegistroUsuarioActivity.reg_genero)==null) {
+            if(AppMeta.findByClave(MenuPrincipal.this,RegistroUsuarioActivity.reg_omitir)==null) {
                 Intent intent = new Intent(MenuPrincipal.this, RegistroUsuarioActivity.class);
                 startActivity(intent);
             }
@@ -166,6 +168,30 @@ public class MenuPrincipal extends ActionBarActivity {
         Conexion.conectar(App.URL_META_REGISTRAR, datos);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_usuario, menu);
+        ((MenuItem)menu.findItem(R.id.menu_accion_mis_datos)).setTitle(AppConfig.txt_info_menu_mis_datos);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.menu_accion_mis_datos) {
+            Intent intent = new Intent(MenuPrincipal.this, MisDatosActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
 }
 

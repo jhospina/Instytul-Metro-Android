@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:id="@+id/layContent_msj_inicial"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -35,15 +35,47 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="¡Pulsa en la pantalla para continuar!"
-            android:id="@+id/txt_pulsar_pantalla"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Quisiéramos conocerte un poco más. ¿Podemos hacerte unas preguntsa? Solo te tomara unos segundos."
+            android:id="@+id/txt_pregunta_registrar_datos"
             android:textColor="#333333"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:gravity="center" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si"
+                android:id="@+id/Btn_reg_si"
+                android:layout_gravity="top"
+                android:textSize="20dp"
+                android:padding="20dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Btn_reg_mas_tarde"
+                android:text="Más tarde"
+                android:textSize="20dp"
+                android:layout_gravity="top"
+                android:padding="20dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
+    <!-- ¿Eres hombreo  mujer? -->
     <!-- PREGUNTA 1-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +83,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:id="@+id/layContent_pregunta1"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="100dp"
@@ -67,29 +99,28 @@
             android:id="@+id/txt_pregunta1" />
 
 
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hombre"
+            android:id="@+id/Btn_Hombre"
+            android:layout_gravity="left"
+            android:textSize="20dp"
+            android:padding="20dp" />
 
-            <Button
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hombre"
-                android:id="@+id/Btn_Hombre"
-                android:layout_gravity="left"
-                android:textSize="20dp"
-                android:padding="20dp"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/Btn_Mujer"
-                android:text="Mujer"
-                android:textSize="20dp"
-                android:layout_gravity="left"
-                android:padding="20dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Btn_Mujer"
+            android:text="Mujer"
+            android:textSize="20dp"
+            android:layout_gravity="left"
+            android:padding="20dp" />
 
     </LinearLayout>
 
-
+    <!-- EDAD -->
     <!-- PREGUNTA 2-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -130,6 +161,154 @@
 
 
     </LinearLayout>
+
+    <!-- CUAL ES TU CORREO ELECTRONICO -->
+    <!-- PREGUNTA 3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/layContent_pregunta3"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cual es tu correo electrónico?"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:id="@+id/txt_pregunta3" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/input_reg_email"
+            android:layout_gravity="center_horizontal"
+            android:hint="Escribir aquí..."/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:id="@+id/Btn_reg_guardar"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:padding="20dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Btn_reg_omitir"
+                android:text="Omitir"
+                android:textSize="20dp"
+                android:layout_gravity="left"
+                android:padding="20dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Selecciona cuales son tus gustos -->
+    <!-- PREGUNTA 4-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/layContent_pregunta4"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuales son tus aficiones?"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:id="@+id/txt_pregunta4" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/layContent_aficiones_pregunta4">
+        </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:id="@+id/Btn_reg_aficiones_guardar"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:padding="20dp" />
+
+
+    </LinearLayout>
+
+<!--FIN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/layContent_reg_fin"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gracias por registrar tus datos. Ya puedes usar nuestra aplicación."
+            android:textSize="25dp"
+            android:gravity="center"
+            android:id="@+id/txt_reg_fin" />
+
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continuar"
+                android:id="@+id/Btn_reg_continuar"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:padding="20dp" />
+
+        </LinearLayout>
 
 
 </LinearLayout>

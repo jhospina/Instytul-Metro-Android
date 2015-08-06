@@ -80,6 +80,14 @@
             android:name=".RegistroUsuarioActivity"
             android:label="@string/title_activity_registro_usuario" >
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".MisDatosActivity"
+            android:label="@string/title_activity_mis_datos" >
+        </activity>
     </application>
 
 </manifest>

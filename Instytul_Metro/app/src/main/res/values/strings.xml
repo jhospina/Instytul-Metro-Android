@@ -15,4 +15,6 @@
     <string name="title_activity_registro_usuario">RegistroUsuarioActivity</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_mis_datos">MisDatosActivity</string>
 </resources>
