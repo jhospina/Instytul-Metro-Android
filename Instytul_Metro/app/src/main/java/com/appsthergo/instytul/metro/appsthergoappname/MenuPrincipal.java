@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import org.json.JSONObject;
@@ -74,12 +75,30 @@ public class MenuPrincipal extends ActionBarActivity {
         LinearLayout layoutMenu4 = (LinearLayout) findViewById(R.id.lay_menu4);
 
 
+        /**
+         * OCULTA CADA SECCION DE LA APLICACIÓN DEPENDIENDO DEL A CONFIGURACIÓN
+         */
+        if(!AppConfig.modulo_institucional)
+            layoutMenu1.setVisibility(View.GONE);
+        if(!AppConfig.modulo_noticias)
+            layoutMenu2.setVisibility(View.GONE);
+        if(!AppConfig.modulo_encuestas)
+            layoutMenu3.setVisibility(View.GONE);
+        if(!AppConfig.modulo_pqr)
+            layoutMenu4.setVisibility(View.GONE);
+
+        if(!AppConfig.modulo_institucional && !AppConfig.modulo_noticias)
+            ((TableRow)findViewById(R.id.menuPrincipal_fila1)).setVisibility(View.GONE);
+        if(!AppConfig.modulo_encuestas && !AppConfig.modulo_pqr)
+            ((TableRow)findViewById(R.id.menuPrincipal_fila2)).setVisibility(View.GONE);
+
+
+
+
         //Institucional
         layoutMenu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
 
                 Intent intent=new Intent(MenuPrincipal.this,InstitucionalActivity.class);
                 startActivity(intent);

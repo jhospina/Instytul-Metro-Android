@@ -29,6 +29,11 @@ public class AppConfig {
     public static String colorFondoMenuBt_2 = "#FFFFFF";
     public static String colorFondoMenuBt_3 = "#FFFFFF";
     public static String colorFondoMenuBt_4 = "#FFFFFF";
+    public static boolean modulo_institucional=true;
+    public static boolean modulo_noticias=true;
+    public static boolean modulo_encuestas=true;
+    public static boolean modulo_pqr=false;
+
 
 
     /**
